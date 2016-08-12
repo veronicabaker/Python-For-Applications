@@ -1,0 +1,25 @@
+{% extends "Parent.html" %}
+{% block title %}Python for Applications{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div>
+    <h2 class="subtitle">Overview</h2>
+    <div class="content">
+    <p>
+        Python for Applications requires a final project. This site collects final
+        project proposals and shows information about the proposals submitted. You can:<br>
+        <ul>
+            <li>
+                <a href="/projects">Add or view</a> project proposals
+            </li>
+            <li>...Or check out a
+                <a href="/report">summary</a> of all the
+                modules mentioned in submitted proposals
+            </li>
+        </ul>
+    </p>
+    </div>
+</div>
+{% endblock %}

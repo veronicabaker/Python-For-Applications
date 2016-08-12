@@ -1,0 +1,32 @@
+{% extends "Parent.html" %}
+{% block title %}Python for Applications{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<h2 class="subtitle">Add a project proposal</h2>
+<form method="POST" action="" class="subtitle">
+    NetID:<br>
+    <input type="text" name="NetID" placeholder="" value=""><br>
+    Title:<br>
+    <input type="text" name="Title" placeholder="" value=""><br>
+    Description:<br>
+    <input type="text" name="Description" placeholder="" value=""><br>
+    Modules:<br>
+    <input type="text" name="Modules" placeholder="" value=""><br><br>
+    <input type="submit" value="Submit">
+</form>
+<h2 class="subtitle">List of final project proposals</h2>
+<table>
+    <tr>
+        <th>NetId</th>
+        <th>Title</th>
+    </tr>
+    {% for student in projects %}
+    <tr>
+        <td>{{student.netid}}</td>
+        <td>{{student.title}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

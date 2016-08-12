@@ -1,0 +1,20 @@
+{% extends "Parent.html" %}
+{% block title %}Python for Applications{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+    <h2 class="subtitle">Modules used in final projects</h2>
+    <table>
+        <tr>
+            <th>Module</th>
+            <th>Number</th>
+        </tr>
+        {% for module, count in modules.items() %}
+        <tr>
+            <td>{{module|e}}</td>
+            <td>{{count|e}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

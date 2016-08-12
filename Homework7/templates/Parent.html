@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} {% endblock %} - Python for Applications
+    </title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div id ="main-header">
+        <h1>Python for Applications</h1>
+        <h2>Final Projects</h2>
+        <a href="/">Home</a> |
+        <a href="/projects">Add / View Projects</a> |
+        <a href="/report">Summary of Modules Used</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>
